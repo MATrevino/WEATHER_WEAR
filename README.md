@@ -1,4 +1,4 @@
-SWEATER WEATHER BACKEND SERVICE
+WEATHER WEAR BACKEND SERVICE
 
 The goal of this project is to create a variety of endpoints for a frontend application that will allow users to plan road trips. The application will allow 
 
