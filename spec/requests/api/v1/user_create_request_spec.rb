@@ -33,6 +33,7 @@ RSpec.describe 'create a user' do
       }
 
     post '/api/v1/users', params: user_input.to_json, headers: { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
+    info = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to_not be_successful
     expect(response.status).to eq(400)

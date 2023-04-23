@@ -16,10 +16,10 @@ RSpec.describe 'receive forecast for a city' do
         expect(info[:data][:id]).to eq('null')
         expect(info[:data][:type]).to eq('forecast')
         expect(info[:data][:attributes].keys).to eq([:current_weather, :daily_weather, :hourly_weather])
-        expect(info[:data][:attributes][:current_weather].first.keys).to eq([:last_updated, :temperature, :feels_like, :humidity, :uvi, :visibility, :condition, :icon])
+        expect(info[:data][:attributes][:current_weather].keys).to eq([:last_updated, :temperature, :feels_like, :humidity, :uvi, :visibility, :condition, :icon])
+        expect(info[:data][:attributes][:current_weather].keys).to_not eq([:temp_c, :feelslike_c, :vis_km, :wind_kph])
         expect(info[:data][:attributes][:daily_weather].first.keys).to eq([:date, :sunrise, :sunset, :max_temp, :min_temp, :condition, :icon])
         expect(info[:data][:attributes][:hourly_weather].first.keys).to eq([:time, :temperature, :conditions, :icon])
-        expect(info[:data][:attributes][:current_weather].first.keys).to_not eq([:temp_c, :feelslike_c, :vis_km, :wind_kph])
       end
     end
 
