@@ -2,7 +2,7 @@ class Forecast
   attr_reader :id, :type, :attributes
 
   def initialize(data)
-    @id = nil
+    @id = 'null'
     @type = 'forecast'
     @attributes = {
       current_weather: current_weather(data[:current]),
