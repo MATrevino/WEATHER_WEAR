@@ -1,4 +1,5 @@
 require 'faraday'
+
 class MapquestService
   def self.get_lat_long(location)
     get_url("/geocoding/v1/address?key=#{ENV["MAPQ_API_KEY"]}&location=#{location}")
