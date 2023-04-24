@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-04-24T09:40:22-06:00">2023-04-24T09:40:22-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-04-24T10:01:06-06:00">2023-04-24T10:01:06-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  95.29%
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.95
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>13</b> files in total.
+    <b>11</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>85</b> relevant lines,
-    <span class="green"><b>81</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed. </span>
+    <b>61</b> relevant lines,
+    <span class="green"><b>61</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
-  95.29%
+  100.0%
 </span>
 )
   </div>
@@ -71,29 +71,7 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#d585fbd235f20102564fe14575732af74f092beb" class="src_link" title="app/facades/salary_facade.rb">app/facades/salary_facade.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">69.23 %</td>
-            <td class="cell--number">29</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">0.69</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#8f2eab12ee08f0f2356babe67f5c23a7eb3e558b" class="src_link" title="app/services/mapquest_service.rb">app/services/mapquest_service.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#31aedea8009f2e4839a7bd2b7d9f4a1373ca64da" class="src_link" title="app/services/weather_service.rb">app/services/weather_service.rb</a></td>
+            <td class="strong t-file__name"><a href="#2d29544817fb452b9caab421933652bb188dcbdf" class="src_link" title="app/services/teleport_service.rb">app/services/teleport_service.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">17</td>
             <td class="cell--number">10</td>
@@ -230,599 +208,9 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="d585fbd235f20102564fe14575732af74f092beb">
+        <div class="source_table" id="2d29544817fb452b9caab421933652bb188dcbdf">
   <div class="header">
-    <h3>app/facades/salary_facade.rb</h3>
-    <h4>
-      <span class="red">
-  69.23%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>13</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class SalaryFacade</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.get_weather_info(location)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    data = MapquestService.get_lat_long(location)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    lat = data[:results].first[:locations].first[:latLng][:lat]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    long = data[:results].first[:locations].first[:latLng][:lng]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    data = WeatherService.get_forecast(lat, long)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    destination = data[:location][:name]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">    forecast =</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">    { </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      condition: data[:current][:condition][:text],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">      temperature: data[:current][:temp_f],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">    }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.salary_info(location)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">    urban_area = TeleportService.get_ua_id(location)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">    data = TeleportService.urban_area_salaries(urban_area)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="23">
-            
-            
-
-            
-
-            <code class="ruby">    binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="24">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby">    wanted_data = {</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby">    }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="8f2eab12ee08f0f2356babe67f5c23a7eb3e558b">
-  <div class="header">
-    <h3>app/services/mapquest_service.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>11</b> relevant lines.
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;faraday&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class MapquestService</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.get_lat_long(location)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    get_url(&quot;/geocoding/v1/address?key=#{ENV[&quot;MAPQ_API_KEY&quot;]}&amp;location=#{location}&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  private</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.conn</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    Faraday.new(url: &quot;http://www.mapquestapi.com&quot;) do |faraday|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      faraday.params[&quot;key&quot;] = ENV[&quot;MAPQ_API_KEY&quot;]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.get_url(url)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    response = conn.get(url)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="31aedea8009f2e4839a7bd2b7d9f4a1373ca64da">
-  <div class="header">
-    <h3>app/services/weather_service.rb</h3>
+    <h3>app/services/teleport_service.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -853,7 +241,7 @@
 
             
 
-            <code class="ruby">class WeatherService</code>
+            <code class="ruby">class TeleportService  </code>
           </li>
         </div>
       
@@ -864,7 +252,7 @@
 
             
 
-            <code class="ruby">  def self.get_forecast(lat, long)</code>
+            <code class="ruby">  def self.urban_area_salaries(urban_area)</code>
           </li>
         </div>
       
@@ -875,7 +263,7 @@
 
             
 
-            <code class="ruby">    get_url(&quot;/v1/forecast.json?q=#{lat},#{long}&amp;days=5&quot;)</code>
+            <code class="ruby">    get_url(&quot;/api/urban_areas/slug:#{urban_area}/salaries/&quot;)</code>
           </li>
         </div>
       
@@ -897,7 +285,7 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -963,7 +351,7 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -974,7 +362,7 @@
 
             
 
-            <code class="ruby">  def self.conn </code>
+            <code class="ruby">  def self.conn</code>
           </li>
         </div>
       
@@ -985,7 +373,7 @@
 
             
 
-            <code class="ruby">    Faraday.new(url: &quot;http://api.weatherapi.com&quot;) do |faraday|</code>
+            <code class="ruby">    Faraday.new(url: &quot;https://api.teleport.org&quot;) do |faraday|</code>
           </li>
         </div>
       
@@ -996,7 +384,7 @@
 
             
 
-            <code class="ruby">      faraday.params[&quot;key&quot;] = ENV[&quot;WEATHER_API_KEY&quot;]</code>
+            <code class="ruby">      faraday.params[&quot;key&quot;] = ENV[&quot;TELEPORT_API_KEY&quot;]</code>
           </li>
         </div>
       

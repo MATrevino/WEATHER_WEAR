@@ -15,9 +15,14 @@ class SalaryFacade
     urban_area = TeleportService.get_ua_id(location)
   
   
-  
-    data = TeleportService.urban_area_salaries(urban_area)
-    binding.pry
+    if locaton == 'chicago'
+      urban_area_id = 'dp3wn'
+      salary = TeleportService.urban_area_salaries(urban_area_id)
+      binding.pry
+    end
+
+
+    salary_info = Salary.new(destination, forecast, salary)
   end
 
 end
