@@ -5,6 +5,9 @@ class MapquestService
     get_url("/geocoding/v1/address?key=#{ENV["MAPQ_API_KEY"]}&location=#{location}")
   end
 
+  def self.get_directions(origin, destination)
+    get_url("/directions/v2/route?key=#{ENV["MAPQ_API_KEY"]}&from=#{origin}&to=#{destination}")
+  end
   private
 
   def self.conn
