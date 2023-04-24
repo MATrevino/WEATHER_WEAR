@@ -1,4 +1,8 @@
 class TeleportService
+  # def self.get_ua_id(ua_name)
+  #   get_url("/api/urban_areas/slug:#{ua_name}/details/")
+  # end
+  
   def self.urban_area_salaries(urban_area)
     get_url("/api/urban_areas/teleport:#{urban_area}/salaries/")
   end
