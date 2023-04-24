@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :forecast, only: [:index]
       resources :users, only: [:create]
       resources :sessions, only: [:create]
-      resources :salary, only: [:index]
+      resources :salaries, only: [:index]
     end
   end
 end
