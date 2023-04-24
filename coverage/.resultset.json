@@ -207,6 +207,30 @@
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/spec/facades/salary_facade_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           null
@@ -258,6 +282,57 @@
           1,
           1,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/spec/poros/salary_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/spec/requests/api/v1/request_salary_info_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -488,6 +563,25 @@
           null
         ]
       },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/spec/services/teleport_service_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/spec/services/weather_service_spec.rb": {
         "lines": [
           1,
@@ -561,19 +655,19 @@
           null,
           1,
           1,
-          4,
+          7,
           null,
           null,
           1,
           null,
           1,
-          4,
-          4,
+          7,
+          7,
           null,
           null,
           1,
-          4,
-          4,
+          7,
+          7,
           null,
           null
         ]
@@ -582,18 +676,18 @@
         "lines": [
           1,
           1,
-          4,
+          7,
           null,
           null,
           1,
           1,
-          4,
-          4,
+          7,
+          7,
           null,
           null,
           1,
-          4,
-          4,
+          7,
+          7,
           null,
           null,
           null
@@ -655,6 +749,101 @@
           null
         ]
       },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/app/facades/salary_facade.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          3,
+          3,
+          3,
+          3,
+          null,
+          3,
+          null,
+          null,
+          3,
+          null,
+          null,
+          3,
+          null,
+          3,
+          null,
+          3,
+          156,
+          null,
+          null,
+          21,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          null
+        ]
+      },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/app/services/teleport_service.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          null,
+          null,
+          1,
+          1,
+          4,
+          4,
+          null,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/app/poros/salary.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          null,
+          null
+        ]
+      },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/app/controllers/api/v1/salaries_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/app/serializers/salaries_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/app/controllers/api/v1/users_controller.rb": {
         "lines": [
           1,
@@ -672,12 +861,6 @@
           1,
           9,
           null,
-          null
-        ]
-      },
-      "/Users/meredithtrevino/turing_work/3mod/projects/WEATHER_WEAR/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           null
         ]
       },
@@ -730,6 +913,6 @@
         ]
       }
     },
-    "timestamp": 1682288389
+    "timestamp": 1682366862
   }
 }
