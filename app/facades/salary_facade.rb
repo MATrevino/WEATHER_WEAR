@@ -1,9 +1,9 @@
 class SalaryFacade
 
   def self.salary_info(location)
-    data = MapquestService.get_lat_long(location)
-    lat = data[:results].first[:locations].first[:latLng][:lat]
-    long = data[:results].first[:locations].first[:latLng][:lng]
+    data_for_ll = MapquestService.get_lat_long(location)
+    lat = data_for_ll[:results].first[:locations].first[:latLng][:lat]
+    long = data_for_ll[:results].first[:locations].first[:latLng][:lng]
     data = WeatherService.get_forecast(lat, long)
     
     destination = data[:location][:name]
