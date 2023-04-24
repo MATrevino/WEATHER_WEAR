@@ -10,7 +10,16 @@ RSpec.describe 'receive salary info for a city' do
 
         data = JSON.parse(response.body, symbolize_names: true)
 
-        binding.pry
+        expect(response).to be_successful
+        expect(data).to be_a(Hash)
+        expect(data[:data].keys).to eq([:id, :type, :attributes])
+        expect(data[:data][:id]).to eq("null")
+        expect(data[:data][:type]).to eq("salaries")
+        expect(data[:data][:attributes].keys).to eq([:destination, :forecast, :salary])
+        expect(data[:data][:attributes][:destination]).to eq("Chicago")
+        expect(data[:data][:attributes][:forecast].keys).to eq([:summary, :temperature])
+        expect(data[:data][:attributes][:salary].count).to eq(7)
+        expect(data[:data][:attributes][:salary]).to_not include("title" => "Chef")
       end
     end
   end

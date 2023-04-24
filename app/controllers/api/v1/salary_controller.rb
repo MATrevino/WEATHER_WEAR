@@ -1,8 +1,6 @@
-class SalaryController < ApplicationController
+class Api::V1::SalaryController < ApplicationController
   def index
-    binding.pry
-    #params[:location]
-    @salary = Salary.find_by_location(params[:location])
-    render json: @salary
+    salary = SalaryFacade.salary_info(params[:destination])
+    render json: SalariesSerializer.new(salary)
   end
 end
