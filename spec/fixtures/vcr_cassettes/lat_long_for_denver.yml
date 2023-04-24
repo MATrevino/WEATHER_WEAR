@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 23 Apr 2023 01:18:55 GMT
+      - Sun, 23 Apr 2023 01:17:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,17 +29,17 @@ http_interactions:
       X-Ratelimit-Limit-2628000:
       - '15000'
       X-Ratelimit-Remaining-2628000:
-      - '14664'
+      - '14666'
       Ratelimit-Limit:
       - '15000'
       Ratelimit-Remaining:
-      - '14664'
+      - '14666'
       Ratelimit-Reset:
-      - '2335265'
+      - '2335360'
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - d074b9c0-e174-11ed-aa3c-cb240186020f
+      - 98372480-e174-11ed-b617-4d5604ae0a0c
       Access-Control-Allow-Origin:
       - "*"
       X-Transaction-Count:
@@ -50,7 +50,119 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMiBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
-  recorded_at: Sun, 23 Apr 2023 01:18:55 GMT
+  recorded_at: Sun, 23 Apr 2023 01:17:20 GMT
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/forecast.json?days=5&key=ea8978b73b8b46929a5182930232204&q=,
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 23 Apr 2023 01:17:41 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - BunnyCDN-IL1-1069
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=5
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '400'
+      Cdn-Cachedat:
+      - 04/23/2023 01:17:41
+      Cdn-Edgestorageid:
+      - '894'
+      Cdn-Status:
+      - '400'
+      Cdn-Requestid:
+      - 47ab94ccd32e220dd68784ad3f87f988
+      Cdn-Cache:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":1006,"message":"No matching location found."}}'
+  recorded_at: Sun, 23 Apr 2023 01:17:41 GMT
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/forecast.json?days=5&key=ea8978b73b8b46929a5182930232204&q=,
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 23 Apr 2023 01:17:47 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - BunnyCDN-IL1-1069
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=5
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '400'
+      Cdn-Cachedat:
+      - 04/23/2023 01:17:47
+      Cdn-Edgestorageid:
+      - '894'
+      Cdn-Status:
+      - '400'
+      Cdn-Requestid:
+      - 1b82b109221cf6f5d8da52083c8250e0
+      Cdn-Cache:
+      - EXPIRED
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":1006,"message":"No matching location found."}}'
+  recorded_at: Sun, 23 Apr 2023 01:17:47 GMT
 - request:
     method: get
     uri: http://api.weatherapi.com/v1/forecast.json?days=5&key=ea8978b73b8b46929a5182930232204&q=39.74001,-104.99202
@@ -70,7 +182,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 23 Apr 2023 01:18:55 GMT
+      - Sun, 23 Apr 2023 01:18:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -80,7 +192,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Server:
-      - BunnyCDN-IL1-1068
+      - BunnyCDN-IL1-1069
       Cdn-Pullzone:
       - '93447'
       Cdn-Uid:
@@ -102,9 +214,9 @@ http_interactions:
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - 9fb4c1889dce52db6624116701117296
+      - 027505b18f42dc6990f1fff86911e73d
       Cdn-Cache:
-      - HIT
+      - MISS
     body:
       encoding: ASCII-8BIT
       string: '{"location":{"name":"Denver","region":"Colorado","country":"United
@@ -263,5 +375,5 @@ http_interactions:
         21:00","temp_c":3.9,"temp_f":39.0,"is_day":0,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png","code":1000},"wind_mph":3.1,"wind_kph":5.0,"wind_degree":121,"wind_dir":"ESE","pressure_mb":1019.0,"pressure_in":30.08,"precip_mm":0.0,"precip_in":0.0,"humidity":92,"cloud":21,"feelslike_c":2.8,"feelslike_f":37.0,"windchill_c":2.8,"windchill_f":37.0,"heatindex_c":3.9,"heatindex_f":39.0,"dewpoint_c":2.7,"dewpoint_f":36.9,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":4.7,"gust_kph":7.6,"uv":1.0},{"time_epoch":1682568000,"time":"2023-04-26
         22:00","temp_c":3.1,"temp_f":37.6,"is_day":0,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png","code":1003},"wind_mph":2.2,"wind_kph":3.6,"wind_degree":143,"wind_dir":"SE","pressure_mb":1019.0,"pressure_in":30.09,"precip_mm":0.0,"precip_in":0.0,"humidity":94,"cloud":37,"feelslike_c":2.6,"feelslike_f":36.7,"windchill_c":2.6,"windchill_f":36.7,"heatindex_c":3.1,"heatindex_f":37.6,"dewpoint_c":2.2,"dewpoint_f":36.0,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":3.8,"gust_kph":6.1,"uv":1.0},{"time_epoch":1682571600,"time":"2023-04-26
         23:00","temp_c":3.0,"temp_f":37.4,"is_day":0,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png","code":1003},"wind_mph":2.7,"wind_kph":4.3,"wind_degree":196,"wind_dir":"SSW","pressure_mb":1019.0,"pressure_in":30.08,"precip_mm":0.0,"precip_in":0.0,"humidity":93,"cloud":26,"feelslike_c":2.1,"feelslike_f":35.8,"windchill_c":2.1,"windchill_f":35.8,"heatindex_c":3.0,"heatindex_f":37.4,"dewpoint_c":2.0,"dewpoint_f":35.6,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":4.5,"gust_kph":7.2,"uv":1.0}]}]}}'
-  recorded_at: Sun, 23 Apr 2023 01:18:55 GMT
+  recorded_at: Sun, 23 Apr 2023 01:18:26 GMT
 recorded_with: VCR 6.1.0
