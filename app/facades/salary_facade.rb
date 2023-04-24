@@ -10,7 +10,7 @@ class SalaryFacade
     forecast =
     { 
       summary: data[:current][:condition][:text],
-      temperature: "#{data[:current][:temp_f].to_i} F",
+      temperature: "#{data[:current][:temp_f].to_i} F"
     }
       big_info = TeleportService.urban_area_salaries(location)
 

@@ -10,9 +10,9 @@ RSpec.describe 'salary facade' do
         expect(response).to be_a(Salary)
         expect(response.destination).to eq("Chicago")
         expect(response.forecast.keys).to eq([:summary, :temperature])
-        expect(response.salary.first.keys).to eq([:title, :min, :max])
-        expect(response.salary.first[:title]).to eq("Data Analyst")
-        expect(response.salary).to_not include("title" => "Waiter")
+        expect(response.salaries.first.keys).to eq([:title, :min, :max])
+        expect(response.salaries.first[:title]).to eq("Data Analyst")
+        expect(response.salaries).to_not include("title" => "Waiter")
       end
     end
   end

@@ -1,4 +1,4 @@
 class SalariesSerializer
   include JSONAPI::Serializer
-  attributes :destination, :forecast, :salary
+  attributes :destination, :forecast, :salaries
 end

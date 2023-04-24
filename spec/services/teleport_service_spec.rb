@@ -7,7 +7,6 @@ RSpec.describe 'TeleportService' do
         location = 'chicago'
 
         response = TeleportService.urban_area_salaries(location)
-        
         expect(response).to be_a(Hash)
         expect(response.keys).to eq([:_links, :salaries])
       end

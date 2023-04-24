@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-04-24T11:53:39-06:00">2023-04-24T11:53:39-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-04-24T13:19:48-06:00">2023-04-24T13:19:48-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -469,7 +469,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#877317f498ec63cd20d8e2b0cbf9b29360b89170" class="src_link" title="spec/services/teleport_service_spec.rb">spec/services/teleport_service_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">16</td>
+            <td class="cell--number">15</td>
             <td class="cell--number">9</td>
             <td class="cell--number">9</td>
             <td class="cell--number">0</td>
@@ -701,7 +701,7 @@
 
             
 
-            <code class="ruby">    salary = SalaryFacade.salary_info(params[:destination])</code>
+            <code class="ruby">    salary = SalaryFacade.salary_info(params[:destination].downcase)</code>
           </li>
         </div>
       
@@ -1813,7 +1813,7 @@
 
             
 
-            <code class="ruby">      temperature: &quot;#{data[:current][:temp_f].to_i} F&quot;,</code>
+            <code class="ruby">      temperature: &quot;#{data[:current][:temp_f].to_i} F&quot;</code>
           </li>
         </div>
       
@@ -2839,7 +2839,7 @@
 
             
 
-            <code class="ruby">  attr_reader :id, :type, :destination, :forecast, :salary</code>
+            <code class="ruby">  attr_reader :id, :type, :destination, :forecast, :salaries</code>
           </li>
         </div>
       
@@ -2861,7 +2861,7 @@
 
             
 
-            <code class="ruby">  def initialize(destination, forecast, salary)</code>
+            <code class="ruby">  def initialize(destination, forecast, salaries)</code>
           </li>
         </div>
       
@@ -2916,7 +2916,7 @@
 
             
 
-            <code class="ruby">    @salary = salary</code>
+            <code class="ruby">    @salaries = salaries</code>
           </li>
         </div>
       
@@ -3099,7 +3099,7 @@
 
             
 
-            <code class="ruby">  attributes :destination, :forecast, :salary</code>
+            <code class="ruby">  attributes :destination, :forecast, :salaries</code>
           </li>
         </div>
       
@@ -6087,7 +6087,7 @@
 
             
 
-            <code class="ruby">        expect(response.salary.first.keys).to eq([:title, :min, :max])</code>
+            <code class="ruby">        expect(response.salaries.first.keys).to eq([:title, :min, :max])</code>
           </li>
         </div>
       
@@ -6098,7 +6098,7 @@
 
             
 
-            <code class="ruby">        expect(response.salary.first[:title]).to eq(&quot;Data Analyst&quot;)</code>
+            <code class="ruby">        expect(response.salaries.first[:title]).to eq(&quot;Data Analyst&quot;)</code>
           </li>
         </div>
       
@@ -6109,7 +6109,7 @@
 
             
 
-            <code class="ruby">        expect(response.salary).to_not include(&quot;title&quot; =&gt; &quot;Waiter&quot;)</code>
+            <code class="ruby">        expect(response.salaries).to_not include(&quot;title&quot; =&gt; &quot;Waiter&quot;)</code>
           </li>
         </div>
       
@@ -6935,7 +6935,7 @@
 
             
 
-            <code class="ruby">        expect(response.salary.first.keys).to eq([:title, :min, :max])</code>
+            <code class="ruby">        expect(response.salaries.first.keys).to eq([:title, :min, :max])</code>
           </li>
         </div>
       
@@ -6946,7 +6946,7 @@
 
             
 
-            <code class="ruby">        expect(response.salary.size).to eq(7)</code>
+            <code class="ruby">        expect(response.salaries.size).to eq(7)</code>
           </li>
         </div>
       
@@ -7197,7 +7197,7 @@
 
             
 
-            <code class="ruby">        expect(data[:data][:attributes].keys).to eq([:destination, :forecast, :salary])</code>
+            <code class="ruby">        expect(data[:data][:attributes].keys).to eq([:destination, :forecast, :salaries])</code>
           </li>
         </div>
       
@@ -7230,7 +7230,7 @@
 
             
 
-            <code class="ruby">        expect(data[:data][:attributes][:salary].count).to eq(7)</code>
+            <code class="ruby">        expect(data[:data][:attributes][:salaries].count).to eq(7)</code>
           </li>
         </div>
       
@@ -7241,7 +7241,7 @@
 
             
 
-            <code class="ruby">        expect(data[:data][:attributes][:salary]).to_not include(&quot;title&quot; =&gt; &quot;Chef&quot;)</code>
+            <code class="ruby">        expect(data[:data][:attributes][:salaries]).to_not include(&quot;title&quot; =&gt; &quot;Chef&quot;)</code>
           </li>
         </div>
       
@@ -9755,18 +9755,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">        </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
+          <li class="covered" data-hits="1" data-linenumber="10">
             <span class="hits">1</span>
             
 
@@ -9777,7 +9766,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
+          <li class="covered" data-hits="1" data-linenumber="11">
             <span class="hits">1</span>
             
 
@@ -9788,7 +9777,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -9799,7 +9788,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -9810,7 +9799,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -9821,7 +9810,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
