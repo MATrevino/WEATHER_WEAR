@@ -1,6 +1,6 @@
 class TeleportService  
-  def self.urban_area_salaries(urban_area)
-    get_url("/api/urban_areas/slug:#{urban_area}/salaries/")
+  def self.urban_area_salaries(location)
+    get_url("/api/urban_areas/slug:#{location}/salaries/")
   end
 
   private
