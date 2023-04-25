@@ -1,9 +1,20 @@
 class Api::V1::RoadTripController < ApplicationController
   def create
-    roadtrip = RoadtripFacade.travel_info(params[:origin], params[:destination])
-      render json: RoadtripSerializer.new(roadtrip), status: 201
-    # else
-    #   render json: {error: roadtrip.errors.full_messages }, status: 400
-    # end
+    user = User.find_by(api_key: params[:api_key])
+
+    if params[:origin].present? == false || params[:destination].present? == false
+      render json: {error: "Origin and destination are required fields"}, status: 400
+    elsif params[:origin] == params[:destination]
+      render json: {error: "Origin and destination cannot be the same"}, status: 400
+    elsif user && params[:origin] && params[:destination] && params[:origin] != params[:destination]
+      if RoadtripFacade.travel_info(params[:origin], params[:destination]).class == Roadtrip
+        roadtrip = RoadtripFacade.travel_info(params[:origin], params[:destination])
+        render json: RoadtripSerializer.new(roadtrip), status: 201
+      elsif RoadtripFacade.travel_info(params[:origin], params[:destination]) == "Impossible route"
+        render json: {error: "Impossible route"}, status: 400
+      end
+    elsif params[:api_key] != User.find_by(api_key: params[:api_key])
+      render json: {error: "API key is invalid"}, status: 400
+    end
   end
 end
