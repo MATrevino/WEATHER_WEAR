@@ -20,14 +20,12 @@ class RoadtripFacade
       hour[:time] == formatted_time
     end
   
-
     weather_at_eta = {
       datatime: hourly_weather.first[:time],
 
-      temperatur: hourly_weather.first[:temp_f],
+      temperature: hourly_weather.first[:temp_f],
       condition: hourly_weather.first[:condition][:text]
       }
-
 
     Roadtrip.new(origin, destination, travel_time, weather_at_eta)
   end
