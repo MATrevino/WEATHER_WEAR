@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.teleport.org/api/urban_areas/teleport:9xj65/?key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '612'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 24 Apr 2023 14:56:52 GMT
+      Access-Control-Max-Age:
+      - '600'
+      Cache-Control:
+      - public, max-age=300
+      Server:
+      - nginx
+      X-Apiproxy-Cache-Status:
+      - MISS
+      Vary:
+      - Origin,Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 7cc137fc5112e0f1a4468ffa72dedbec.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C1
+      X-Amz-Cf-Id:
+      - ykwjjommte4eVONaD_c9hQmumdt-RcTEwQEH0d4etwTo3kIIJ-iNQg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"_links":{"curies":[{"href":"https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/","name":"location","templated":true},{"href":"https://developers.teleport.org/api/resources/City/#!/relations/{rel}/","name":"city","templated":true},{"href":"https://developers.teleport.org/api/resources/UrbanArea/#!/relations/{rel}/","name":"ua","templated":true},{"href":"https://developers.teleport.org/api/resources/Country/#!/relations/{rel}/","name":"country","templated":true},{"href":"https://developers.teleport.org/api/resources/Admin1Division/#!/relations/{rel}/","name":"a1","templated":true},{"href":"https://developers.teleport.org/api/resources/Timezone/#!/relations/{rel}/","name":"tz","templated":true}],"self":{"href":"https://api.teleport.org/api/urban_areas/slug:denver/"},"ua:admin1-divisions":[{"href":"https://api.teleport.org/api/countries/iso_alpha2:US/admin1_divisions/geonames:CO/","name":"Colorado"}],"ua:cities":{"href":"https://api.teleport.org/api/urban_areas/slug:denver/cities/"},"ua:continent":{"href":"https://api.teleport.org/api/continents/geonames:NA/","name":"North
+        America"},"ua:countries":[{"href":"https://api.teleport.org/api/countries/iso_alpha2:US/","name":"United
+        States"}],"ua:details":{"href":"https://api.teleport.org/api/urban_areas/slug:denver/details/"},"ua:identifying-city":{"href":"https://api.teleport.org/api/cities/geonameid:5419384/","name":"Denver"},"ua:images":{"href":"https://api.teleport.org/api/urban_areas/slug:denver/images/"},"ua:primary-cities":[{"href":"https://api.teleport.org/api/cities/geonameid:5419384/","name":"Denver"},{"href":"https://api.teleport.org/api/cities/geonameid:5412347/","name":"Aurora"}],"ua:salaries":{"href":"https://api.teleport.org/api/urban_areas/slug:denver/salaries/"},"ua:scores":{"href":"https://api.teleport.org/api/urban_areas/slug:denver/scores/"}},"bounding_box":{"latlon":{"east":-104.6393,"north":39.9992,"south":39.4765,"west":-105.1913}},"continent":"North
+        America","full_name":"Denver, Colorado","is_government_partner":false,"mayor":"Michael
+        Hancock","name":"Denver","slug":"denver","teleport_city_url":"https://teleport.org/cities/denver/","ua_id":"9xj65"}'
+  recorded_at: Mon, 24 Apr 2023 14:56:52 GMT
+recorded_with: VCR 6.1.0

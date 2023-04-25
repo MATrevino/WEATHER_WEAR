@@ -12,5 +12,22 @@ RSpec.describe 'MapquestService' do
         expect(response[:results].first[:locations].first[:latLng][:lng]).to eq(-104.99202)
       end
     end
+
+    it 'returns directions from origin to destination' do
+      VCR.use_cassette('mapquest_get_directions_from_origin_to_destination') do
+        origin = 'denver, co'
+        destination = 'chicago, il'
+
+        response = MapquestService.get_directions(origin, destination)
+
+        expect(response).to be_a(Hash)
+        expect(response[:route][:formattedTime]).to be_a(String)
+        expect(response[:route][:formattedTime]).to eq('14:15:52')
+        expect(response[:route][:locations].first[:adminArea5]).to eq('Denver')
+        expect(response[:route][:locations].first[:adminArea3]).to eq('CO')
+        expect(response[:route][:locations][1][:adminArea5]).to eq('Chicago')
+        expect(response[:route][:locations][1][:adminArea3]).to eq('IL')
+      end
+    end
   end
 end
