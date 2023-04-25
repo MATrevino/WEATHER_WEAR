@@ -13,7 +13,7 @@ RSpec.describe 'can request a roadtrip' do
         expect(response.end_city).to eq(destination)
         expect(response.travel_time).to be_a(String)
         expect(response.weather_at_eta).to be_a(Hash)
-        expect(response.weather_at_eta.keys).to eq([:datatime, :temperature, :condition])
+        expect(response.weather_at_eta.keys).to eq([:datetime, :temperature, :condition])
       end
     end
   end

@@ -28,7 +28,37 @@ RSpec.describe 'can request a roadtrip' do
       
         expect(data[:data].keys).to eq([:id, :type, :attributes])
         expect(data[:data][:attributes].keys).to eq([:start_city, :end_city, :travel_time, :weather_at_eta])
-        expect(data[:data][:attributes][:weather_at_eta].keys).to eq([:datatime, :temperature, :condition])
+        expect(data[:data][:attributes][:weather_at_eta].keys).to eq([:datetime, :temperature, :condition])
+      end
+    end
+
+    describe 'can return a roadtrip that is over 24 hours' do
+      it 'can return a roadtrip' do
+        user_input = {
+          email: 'gmail@gmail.com',
+          password: 'password',
+          password_confirmation: 'password'
+          }
+    
+        post '/api/v1/users', params: user_input.to_json, headers: { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
+        info = JSON.parse(response.body, symbolize_names: true)
+        api_key = info[:data][:attributes][:api_key]
+        request = {
+          "origin": "New York, NY",
+          "destination": "Los Angeles, CA",
+          "api_key": api_key
+        }
+        VCR.use_cassette('roadtrip_over_24') do
+          post '/api/v1/road_trip', params: request.to_json, headers: { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
+
+          expect(response).to be_successful
+          expect(response.status).to eq(201)
+          data = JSON.parse(response.body, symbolize_names: true)
+        
+          expect(data[:data].keys).to eq([:id, :type, :attributes])
+          expect(data[:data][:attributes].keys).to eq([:start_city, :end_city, :travel_time, :weather_at_eta])
+          expect(data[:data][:attributes][:weather_at_eta].keys).to eq([:datetime, :temperature, :condition])
+        end
       end
     end
   end
@@ -129,11 +159,13 @@ RSpec.describe 'can request a roadtrip' do
       VCR.use_cassette('roadtrip_with_impossible') do
         post '/api/v1/road_trip', params: request.to_json, headers: { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
 
-        expect(response).to_not be_successful
-        expect(response.status).to eq(400)
+        expect(response).to be_successful
+       
         data = JSON.parse(response.body, symbolize_names: true)
 
-        expect(data[:error]).to eq('Impossible route')
+        expect(data[:data][:attributes][:start_city]).to eq('Chicago,IL')
+        expect(data[:data][:attributes][:travel_time]).to eq('Impossible route')
+        expect(data[:data][:attributes][:weather_at_eta]).to eq({})
       end
     end
   end
