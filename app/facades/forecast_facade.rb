@@ -38,6 +38,6 @@ class ForecastFacade
           icon: hour[:condition][:icon]
         }
       end
-    x =Forecast.new(current_weather, daily_weather, hourly_weather)
+     Forecast.new(current_weather, daily_weather, hourly_weather)
   end
 end
